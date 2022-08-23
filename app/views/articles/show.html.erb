@@ -1,0 +1,12 @@
+<div>
+  <h2 class='show-page-links'>
+    <%= @article.title %>
+    <%= link_to '<i class="fa-solid fa-pencil"></i>'.html_safe, edit_article_path(@article.id), class: 'show-page-links' %>
+    <%= link_to '<i class="fa-solid fa-trash"></i>'.html_safe,
+      article_path(@article.id),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+      class: 'show-page-links' %>
+  </h2>
+  <p><%= @article.content %></p>
+</div>
+<%= link_to 'See all', articles_path, class: 'btn btn-secondary return-button my-3' %>

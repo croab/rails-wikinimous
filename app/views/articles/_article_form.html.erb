@@ -1,0 +1,15 @@
+<div>
+  <%= form_with model: article do |f| %>
+    <div class="form-item">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form-item">
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+    </div>
+    <div class="form-item">
+      <%= f.submit 'Submit', class: 'btn btn-secondary submit-button' %>
+    </div>
+  <% end %>
+</div>
